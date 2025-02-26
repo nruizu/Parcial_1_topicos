@@ -1,0 +1,10 @@
+<h2>Registrar Vuelo</h2>
+<div class="container">
+    <div class="text-center">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</div>
