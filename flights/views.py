@@ -26,5 +26,13 @@ class Register(View):
             form.save()
             return redirect('home')
         return render(request, self.template_name, {'form': form})
+    
+class ListaVuelosView(ListView):
+    model = Flight
+    template_name = 'list.html'
+    context_object_name = 'flights'
+    ordering = ['price']
+
+
 
 

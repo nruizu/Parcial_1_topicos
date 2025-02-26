@@ -1,0 +1,24 @@
+{% block content %}
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-8">
+            <div class="card-body">
+                {for flight in flights %} 
+                    {% if flight.type == "Domestic" %} 
+                        <h5 class="card-title">
+                            {{flight.name}}
+                        </h5>
+                        <p class="card-text" style="color: blue;">{{fight.price}}</p> 
+                    {% else %}
+                        <h5 class="card-title"><strong>
+                            {{flight.name}}
+                        </strong></h5>
+                        <p class="card-text">{{flight.type}}</p> 
+                    {% endif %}
+                    
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
